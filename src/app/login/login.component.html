@@ -31,16 +31,18 @@
           <div class="form-group">
             <!-- User ID Input -->
             <div class="form-outline mb-4">
-              <input type="number" id="userId" formControlName="userId" name="userId"
+              <input type="text" id="userId" formControlName="userId" name="userId"
                 class="form-control form-control-lg" placeholder="Enter User ID" />
               <label class="form-label" for="form3Example3">User ID</label>
-              <div *ngIf="submitted && f['username'].errors">
+              <div *ngIf="submitted && f['userId'].errors">
                 <div class="error text-danger">
                     UserID is mandatory.
                 </div>
 
             </div>
           </div>
+        </div>
+
 
 
           <!-- Password input -->
@@ -50,16 +52,17 @@
               <input type="password" id="password" formControlName="password" name="password"
                 class="form-control form-control-lg" placeholder="Enter password" />
               <label class="form-label" for="form3Example4">Password</label>
-              <div *ngIf="submitted && f['username'].errors">
+              <div *ngIf="submitted && f['password'].errors">
                 <div class="error text-danger">
                   Password is mandatory.
                 </div>
               </div>
             </div>
+          </div>
 
             <div class="d-flex justify-content-between align-items-center">
 
-              <a href="#!" class="text-body">Forgot password?</a>
+              <a [routerLink]="['/forget']" class="text-body">Forgot password?</a>
             </div>
 
             <div class="text-center text-lg-start mt-4 pt-2">
@@ -70,19 +73,10 @@
             </div>
 
         </form>
+
+        
       </div>
     </div>
   </div>
 
 </section>
-<!-- 
-
-  <div class="form-group">
-    <label for="username"><i class="fas fa-file-signature"></i></label>
-    <input type="text" formControlName="username" name="username" id="username"
-        placeholder="Your Username" />
-    <div *ngIf="submitted && f['username'].errors">
-        <div class="error text-danger">
-            Username is mandatory.
-        </div>
-    </div> -->
