@@ -29,12 +29,9 @@ export class LoginComponent implements OnInit {
 
   }
 
-
-
-
   ngOnInit(): void {
     var isLoggedIn = this.storageService.isLoggedIn();
-    if (isLoggedIn) this.route.navigate(['/']);
+    if (isLoggedIn) this.route.navigate(['/homepage']);
   }
   get f() {
     return this.formGroup.controls;
