@@ -10,13 +10,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

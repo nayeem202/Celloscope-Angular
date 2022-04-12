@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     return this.formGroup.controls;
   }
 
-  st: any;
+ 
 
   onSubmit() {
 
@@ -49,7 +49,8 @@ export class LoginComponent implements OnInit {
 
       this.loginService.login(this.formGroup.value)
         .subscribe(res => {
-          this.route.navigate(['/']);
+          this.storageService.saveLoginInfo(res.data);
+          this.route.navigate(['/homepage']);
           this.toastr.success("Successfully Login")
         }, err => {
           this.toastr.error("Opps ! Login Failed")
